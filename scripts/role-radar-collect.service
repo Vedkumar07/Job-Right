@@ -1,0 +1,9 @@
+[Unit]
+Description=Collect public job postings for Role Radar
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ved-kumar/role-radar
+ExecStart=/usr/bin/python3 /home/ved-kumar/role-radar/server.py --once
+UMask=0077

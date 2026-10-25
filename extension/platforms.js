@@ -1,0 +1,11 @@
+/* Import only visible job links from user-open YC/Naukri pages; no private APIs. */
+(()=>{'use strict';
+const host=location.hostname,platform=/(?:^|\.)(?:ycombinator\.com|workatastartup\.com)$/.test(host)?'yc':/(?:^|\.)naukri\.com$/.test(host)?'naukri':null;if(!platform)return;
+let scheduled,touched='',busy=false;
+const text=el=>String(el?.innerText||el?.textContent||'').replace(/\s+/g,' ').trim();
+const visible=el=>Boolean(el?.getClientRects?.().length)&&getComputedStyle(el).visibility!=='hidden';
+function collect(){const jobs=new Map();for(const link of document.querySelectorAll('a[href]')){if(!visible(link))continue;let url;try{url=new URL(link.href,location.href)}catch{continue}if(url.protocol!=='https:')continue;const same=platform==='yc'?/(?:^|\.)(?:ycombinator\.com|workatastartup\.com)$/.test(url.hostname):/(?:^|\.)naukri\.com$/.test(url.hostname);if(!same||!(platform==='yc'?/\/jobs\/[^/]+/.test(url.pathname):/^\/job-listings-/.test(url.pathname)))continue;url.hash='';url.search='';const card=link.closest('article,[data-job-id],.jobTuple,.srp-jobtuple-wrapper,[class*="JobCard"],[class*="job-card"],li')||link.parentElement;const title=text(link.querySelector('h2,h3,[class*="title"]'))||text(link);if(!title||title.length<4||title.length>250||/^(apply|view job|learn more|save)$/i.test(title))continue;const company=text(card?.querySelector('[class*="companyName"],[class*="company-name"],[class*="comp-name"],[data-company],.company'));const place=text(card?.querySelector('[class*="location"],[class*="locWdth"],[data-location]'));jobs.set(url.href,{title,company:company.slice(0,200)||'Company on '+(platform==='yc'?'YC':'Naukri'),location:place.slice(0,300),url:url.href,description:text(card).slice(0,12000)});if(jobs.size>=100)break;}return [...jobs.values()];}
+async function sync(){if(busy)return;const jobs=collect();if(!jobs.length)return;const signature=JSON.stringify(jobs);if(signature===touched)return;busy=true;try{const response=await chrome.runtime.sendMessage({type:'observed_jobs',platform,jobs});if(response?.ok)touched=signature;}catch{}finally{busy=false}}
+function schedule(){clearTimeout(scheduled);scheduled=setTimeout(sync,1800)}
+new MutationObserver(schedule).observe(document.documentElement,{subtree:true,childList:true});schedule();setInterval(sync,60000);
+})();

@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict'),E=require('../extension/engine.js');
+let p={answers:[{question:'What is your full name?',answer:'Known Name'}]};
+assert.equal(E.answerFor('Please provide your name',p).value,'Known Name');
+p={answers:[{question:'How many years of experience do you have with Python?',answer:'3'}]};
+assert.equal(E.answerFor('Python experience years',p).value,'3');
+assert.equal(E.answerFor('How many years of Java experience?',p),null);
+p={answers:[{question:'Why this company?',answer:'My exact reason',job_id:'one',company:'Example',lane_id:'backend',source:'user-entered'}]};
+assert.equal(E.answerFor('Why this company?',p,{job_id:'one',company:'Example',lane_id:'backend'}).value,'My exact reason');
+assert.equal(E.answerFor('Why this company?',p,{job_id:'two',company:'Other',lane_id:'backend'}),null);
+assert.equal(E.answerFor('Why this company?',p,{job_id:'one',company:'Example',lane_id:'analyst'}),null);
+p={answers:[{question:'Do you require visa sponsorship?',answer:'No'}]};
+assert.equal(E.answerFor('Do you require visa sponsorship?',p).value,'No');
+assert.equal(E.answerFor('Do you not require visa sponsorship?',p),null);
+p={answers:[{question:'Custom question',answer:'A'},{question:'Custom question',answer:'B'}]};
+assert.equal(E.answerFor('Custom question',p),null);
+assert.equal(E.answerFor('OTP',{answers:[{question:'OTP',answer:'123456'}]}),null);
+console.log('PASS: bounded factual paraphrases, scoped learned responses, conservative eligibility and conflict handling.');

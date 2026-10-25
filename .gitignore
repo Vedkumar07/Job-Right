@@ -1,0 +1,21 @@
+data/
+__pycache__/
+*.py[cod]
+*.sqlite*
+*.db
+*.zip
+.sites-checkout*
+.sites-runtime/
+.openai/
+evidence/
+.env
+.env.*
+*private-profile*.json
+
+# Private assistant handoff and investigation artifacts are not application docs.
+HANDOFF.md
+JOBRIGHT-RESEARCH.md
+collection-smoke-result.json
+
+# Separate project and local-only output.
+whatsupdha/

@@ -1,0 +1,74 @@
+{
+  "manifest_version": 3,
+  "name": "Role Radar \u2014 Application Helper",
+  "version": "4.0.3",
+  "description": "Role-specific local application agent with saved-answer learning, matched resumes, visible YC/Naukri imports, and explicit submission confirmation.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "alarms",
+    "tabs",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8877/*",
+    "https://*/*",
+    "http://localhost:8877/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Role Radar Application Helper"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://boards.greenhouse.io/*",
+        "https://job-boards.greenhouse.io/*",
+        "https://boards.eu.greenhouse.io/*",
+        "https://jobs.lever.co/*",
+        "https://jobs.eu.lever.co/*",
+        "https://jobs.ashbyhq.com/*",
+        "https://jobs.smartrecruiters.com/*",
+        "https://*.myworkdayjobs.com/*",
+        "https://www.ycombinator.com/*",
+        "https://www.workatastartup.com/*",
+        "https://www.naukri.com/*",
+        "https://apply.naukri.com/*"
+      ],
+      "js": [
+        "engine.js",
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "http://127.0.0.1:8877/*",
+        "http://localhost:8877/*"
+      ],
+      "js": [
+        "bridge.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.ycombinator.com/*",
+        "https://www.workatastartup.com/*",
+        "https://www.naukri.com/*"
+      ],
+      "js": [
+        "platforms.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icon128.png"
+  }
+}

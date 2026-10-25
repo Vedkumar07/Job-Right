@@ -1,0 +1,16 @@
+[Unit]
+Description=Role Radar job discovery dashboard and twice-daily collector
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ved-kumar/role-radar
+ExecStart=/usr/bin/python3 /home/ved-kumar/role-radar/server.py
+Restart=on-failure
+RestartSec=15
+UMask=0077
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

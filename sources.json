@@ -1,0 +1,272 @@
+[
+  {
+    "company": "Stripe",
+    "kind": "greenhouse",
+    "board": "stripe",
+    "category": "YC startup"
+  },
+  {
+    "company": "Airbnb",
+    "kind": "greenhouse",
+    "board": "airbnb",
+    "category": "YC startup"
+  },
+  {
+    "company": "Coinbase",
+    "kind": "greenhouse",
+    "board": "coinbase",
+    "category": "YC startup"
+  },
+  {
+    "company": "DoorDash",
+    "kind": "greenhouse",
+    "board": "doordash",
+    "category": "YC startup"
+  },
+  {
+    "company": "Dropbox",
+    "kind": "greenhouse",
+    "board": "dropbox",
+    "category": "YC startup"
+  },
+  {
+    "company": "Instacart",
+    "kind": "greenhouse",
+    "board": "instacart",
+    "category": "YC startup"
+  },
+  {
+    "company": "Reddit",
+    "kind": "greenhouse",
+    "board": "reddit",
+    "category": "YC startup"
+  },
+  {
+    "company": "GitLab",
+    "kind": "greenhouse",
+    "board": "gitlab",
+    "category": "YC startup"
+  },
+  {
+    "company": "Figma",
+    "kind": "greenhouse",
+    "board": "figma",
+    "category": "Startup"
+  },
+  {
+    "company": "Databricks",
+    "kind": "greenhouse",
+    "board": "databricks",
+    "category": "Startup"
+  },
+  {
+    "company": "Cloudflare",
+    "kind": "greenhouse",
+    "board": "cloudflare",
+    "category": "MNC"
+  },
+  {
+    "company": "Twilio",
+    "kind": "greenhouse",
+    "board": "twilio",
+    "category": "MNC"
+  },
+  {
+    "company": "HubSpot",
+    "kind": "greenhouse",
+    "board": "hubspot",
+    "category": "MNC"
+  },
+  {
+    "company": "MongoDB",
+    "kind": "greenhouse",
+    "board": "mongodb",
+    "category": "MNC"
+  },
+  {
+    "company": "Datadog",
+    "kind": "greenhouse",
+    "board": "datadog",
+    "category": "MNC"
+  },
+  {
+    "company": "Razorpay",
+    "kind": "greenhouse",
+    "board": "razorpay",
+    "category": "YC startup"
+  },
+  {
+    "company": "Meesho",
+    "kind": "greenhouse",
+    "board": "meesho",
+    "category": "YC startup"
+  },
+  {
+    "company": "Groww",
+    "kind": "greenhouse",
+    "board": "groww",
+    "category": "YC startup"
+  },
+  {
+    "company": "Brex",
+    "kind": "ashby",
+    "board": "brex",
+    "category": "YC startup"
+  },
+  {
+    "company": "OpenAI",
+    "kind": "ashby",
+    "board": "openai",
+    "category": "Startup"
+  },
+  {
+    "company": "Notion",
+    "kind": "ashby",
+    "board": "notion",
+    "category": "Startup"
+  },
+  {
+    "company": "Ramp",
+    "kind": "ashby",
+    "board": "ramp",
+    "category": "Startup"
+  },
+  {
+    "company": "Linear",
+    "kind": "ashby",
+    "board": "linear",
+    "category": "Startup"
+  },
+  {
+    "company": "Deel",
+    "kind": "ashby",
+    "board": "deel",
+    "category": "YC startup"
+  },
+  {
+    "company": "Supabase",
+    "kind": "ashby",
+    "board": "supabase",
+    "category": "YC startup"
+  },
+  {
+    "company": "PostHog",
+    "kind": "ashby",
+    "board": "posthog",
+    "category": "YC startup"
+  },
+  {
+    "company": "Vanta",
+    "kind": "ashby",
+    "board": "vanta",
+    "category": "YC startup"
+  },
+  {
+    "company": "Zapier",
+    "kind": "ashby",
+    "board": "zapier",
+    "category": "YC startup"
+  },
+  {
+    "company": "Sentry",
+    "kind": "ashby",
+    "board": "sentry",
+    "category": "YC startup"
+  },
+  {
+    "company": "Rippling",
+    "kind": "ashby",
+    "board": "rippling",
+    "category": "YC startup"
+  },
+  {
+    "company": "Netflix",
+    "kind": "lever",
+    "board": "netflix",
+    "category": "MNC"
+  },
+  {
+    "company": "Plaid",
+    "kind": "lever",
+    "board": "plaid",
+    "category": "Startup"
+  },
+  {
+    "company": "Palantir",
+    "kind": "lever",
+    "board": "palantir",
+    "category": "MNC"
+  },
+  {
+    "company": "Spotify",
+    "kind": "lever",
+    "board": "spotify",
+    "category": "MNC"
+  },
+  {
+    "company": "Nielsen",
+    "kind": "lever",
+    "board": "nielsen",
+    "category": "MNC"
+  },
+  {
+    "company": "Bosch",
+    "kind": "smartrecruiters",
+    "board": "BoschGroup",
+    "category": "MNC"
+  },
+  {
+    "company": "Visa",
+    "kind": "smartrecruiters",
+    "board": "Visa",
+    "category": "MNC"
+  },
+  {
+    "company": "ServiceNow",
+    "kind": "smartrecruiters",
+    "board": "ServiceNow",
+    "category": "MNC"
+  },
+  {
+    "company": "Freshworks",
+    "kind": "smartrecruiters",
+    "board": "Freshworks",
+    "category": "MNC"
+  },
+  {
+    "company": "Western Digital",
+    "kind": "smartrecruiters",
+    "board": "WesternDigital",
+    "category": "MNC"
+  },
+  {
+    "company": "Microsoft",
+    "kind": "career_page",
+    "board": "https://careers.microsoft.com/",
+    "category": "MNC"
+  },
+  {
+    "company": "Google",
+    "kind": "career_page",
+    "board": "https://www.google.com/about/careers/applications/jobs/results/",
+    "category": "MNC"
+  },
+  {
+    "company": "Amazon",
+    "kind": "career_page",
+    "board": "https://www.amazon.jobs/en/",
+    "category": "MNC"
+  },
+  {
+    "company": "TCS",
+    "kind": "career_page",
+    "board": "https://www.tcs.com/careers",
+    "category": "MNC"
+  },
+  {
+    "company": "Infosys",
+    "kind": "career_page",
+    "board": "https://www.infosys.com/careers/",
+    "category": "MNC"
+  }
+]
